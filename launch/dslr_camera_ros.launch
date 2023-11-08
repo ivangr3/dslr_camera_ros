@@ -1,0 +1,9 @@
+<launch>
+    <arg name="pub_preview" default="true"/>
+    <arg name="preview_rate" default="30"/>
+
+    <node name="dslr_camera" pkg="dslr_camera_ros" type="dslr_camera_ros_node" output="screen">
+        <param name="pub_preview" value="$(arg pub_preview)"/>
+        <param name="preview_rate" value="$(arg preview_rate)"/>
+    </node>
+</launch>
